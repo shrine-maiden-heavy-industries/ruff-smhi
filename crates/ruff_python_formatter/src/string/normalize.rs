@@ -161,7 +161,7 @@ impl<'a, 'src> StringNormalizer<'a, 'src> {
             if let Some(quote) = self.context.docstring() {
                 QuoteStyle::from(quote.opposite())
             } else {
-                QuoteStyle::Double
+                preferred_quote_style
             }
         } else {
             preferred_quote_style
